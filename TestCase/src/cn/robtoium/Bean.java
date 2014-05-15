@@ -9,5 +9,4 @@ public class Bean {
 	 */
 	public static String currentPath = System.getProperty("user.dir") + File.separator;
 	public static String rootName = "root";
-	public static String testClassName = "AllTest";
 }

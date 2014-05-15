@@ -46,9 +46,7 @@ public class DataProcess {
 		
 	}
 	
-	/**
-	 * 生成脚本文件,如test.sh或 test.bat
-	 */
+	//生成脚本文件,如test.sh或 test.bat
 	public static void createFile(){
 		initLists();
 		try {
@@ -73,6 +71,7 @@ public class DataProcess {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
 	
 	/**
@@ -96,15 +95,14 @@ public class DataProcess {
 			commands.add(command);
 		}
 		List<HashMap<String, String>> lists = new ArrayList<HashMap<String,String>>();
+		HashMap<String, String> map = new HashMap<String, String>();
 		for (int i = 0; i < methods.size(); i++) {
-			HashMap<String, String> map = new HashMap<String, String>();
 			map.put("PackageName", packageName);
 			map.put("MethodName", methods.get(i).toString());
 			map.put("MethodComments", comments.get(i).toString());
 			map.put("Command", commands.get(i).toString());
 			lists.add(map);
 		}
-		System.out.println(lists);
 		return lists;
 	}
 	
@@ -116,7 +114,8 @@ public class DataProcess {
 	public static List<String> readfile(String str, String key){
 		config = parserXml();
 		//配置AllTest的读取路径
-		String pathName = Bean.currentPath + config.get(0).get(key);
+//		String pathName = Bean.currentPath + config.get(0).get(key);
+		String pathName = config.get(0).get(key);
 		File file = new File(pathName);
 		try {
 			InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(file), "UTF-8");
