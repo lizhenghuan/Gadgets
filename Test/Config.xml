@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-		<packageName>com.pateo.multimedia.test</packageName>
-		<testClass>com.pateo.multimedia.test.AllTest</testClass>
-		<path>C:\Users\pateo\workspace\MultiMediaTest/src/com/pateo/multimedia/test/AllTest.java</path>
+		<packageName>cn.robotium.test</packageName>
+		<testClass>cn.robotium.test.AllTest</testClass>
+		<path>C:\Users\robotium\workspace\AppTest/src/cn/robotium/test/AllTest.java</path>
 		<testClassName>AllTest</testClassName>
-		<instrumentation>com.local.PatienceInstrumentationTestRunner</instrumentation>
+		<instrumentation>android.test.InstrumentationTestRunner</instrumentation>
 		<commandPrefix>adb shell am instrument -w -e class</commandPrefix>
 		<!-- fileName  test.sh  test.bat应用于不同操作系统 -->
 		<fileName>test.bat</fileName>
